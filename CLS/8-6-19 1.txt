@@ -1,0 +1,9 @@
+empty_list=[]
+password=("Rao","Mohan",'Jagan')
+for count in range(5):
+    i=raw_input('Enter password:')
+    if i in password:
+        print 'password correct'
+    else:
+        empty_list.append(i)
+print empty_list

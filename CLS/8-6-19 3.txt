@@ -1,0 +1,10 @@
+#factorial demo
+
+result=1
+
+number=input('Enter integer:')
+while(number>1):
+    result=result*number
+    number-=1
+print 'factorial is:',result
+

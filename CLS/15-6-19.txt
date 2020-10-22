@@ -1,0 +1,300 @@
+>>> c=s
+>>> c
+"hello ' how are you?"
+>>> s[0]
+'h'
+>>> c[0]
+'h'
+>>> c=s+'MNI'
+>>> c
+"hello ' how are you?MNI"
+>>> s
+"hello ' how are you?"
+>>> f=[1,2,3]
+>>> g=f
+>>> f.append(4)
+>>> f
+[1, 2, 3, 4]
+>>> g
+[1, 2, 3, 4]
+>>> s
+"hello ' how are you?"
+>>> c
+"hello ' how are you?MNI"
+>>> s=s+'u'
+>>> s
+"hello ' how are you?u"
+>>> c
+"hello ' how are you?MNI"
+>>> 'sr'+2
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: cannot concatenate 'str' and 'int' objects
+>>> 'sr'+'f'
+'srf'
+>>> 'sr'+[1,2,3]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: cannot concatenate 'str' and 'list' objects
+>>> [4,5]+[1,2,3]
+[4, 5, 1, 2, 3]
+>>> v=[4,5]+[1,2,3]
+>>> str(v).isdigit()
+False
+>>> "12345".isdigit()
+True
+>>> "12345p".isdigit()
+False
+>>> 'hello'.upper()
+'HELLO'
+>>> n='hello'.upper()
+>>> n
+'HELLO'
+>>> n.lower()
+'hello'
+>>> n.isalnum()
+True
+>>> n+='$'
+>>> n.isalnum()
+False
+>>> n+='88'
+>>> n.isalnum()
+False
+>>> n
+'HELLO$88'
+>>> n+=' There is One'
+>>> n
+'HELLO$88 There is One'
+>>> n.istitle()
+False
+>>> 'Hello There How Are you'.istitle()
+False
+>>> 'Hello There How Are You'.istitle()
+True
+>>> 'Hello There How Are you'.title()
+'Hello There How Are You'
+>>> len(n)
+21
+>>> n.ljust(30,'?')
+'HELLO$88 There is One?????????'
+>>> n.rjust(30,'?')
+'?????????HELLO$88 There is One'
+>>> n.center(30,'?')
+'????HELLO$88 There is One?????'
+>>> n.center(10,'?')
+'HELLO$88 There is One'
+>>> dir()
+['__builtins__', '__doc__', '__future__', '__name__', '__package__', 'a', 'c', '
+f', 'g', 'n', 'rao', 's', 'v', 'x']
+>>> g
+[1, 2, 3, 4]
+>>> n
+'HELLO$88 There is One'
+>>> v
+[4, 5, 1, 2, 3]
+>>> b='hello there how are you?'
+>>> b.capitalize()
+'Hello there how are you?'
+>>> b
+'hello there how are you?'
+>>> b.count('re')
+2
+>>> b.count('re',-7)
+1
+>>> b.count('re',0,12)
+1
+>>> b.index('re')
+9
+>>> b.startswith('re',9)
+True
+>>> b.endswith('?',9)
+True
+>>> n
+'HELLO$88 There is One'
+>>> x
+1000000000000.0
+>>> m='Hello \n there'
+>>> m='Hello\tthere'
+>>> m.expandtabs(6)
+'Hello there'
+>>> m.expandtabs()
+'Hello   there'
+>>> m.expandtabs(2)
+'Hello there'
+>>> m
+'Hello\tthere'
+>>> m.strip('\t')
+'Hello\tthere'
+>>> m.strip('o')
+'Hello\tthere'
+>>> m+='oooooooo'
+>>> m
+'Hello\tthereoooooooo'
+>>> m.strip('o')
+'Hello\tthere'
+>>> m='oooooooo'+m
+>>> m
+'ooooooooHello\tthereoooooooo'
+>>> m.strip('o')
+'Hello\tthere'
+>>> m
+'ooooooooHello\tthereoooooooo'
+>>> m.lstrip('o')
+'Hello\tthereoooooooo'
+>>> m
+'ooooooooHello\tthereoooooooo'
+>>> m.rstrip('o')
+'ooooooooHello\tthere'
+>>> m
+'ooooooooHello\tthereoooooooo'
+>>> m.find('Hello')
+8
+>>> m[8]
+'H'
+>>> n
+'HELLO$88 There is One'
+>>> '/'.join(n)
+'H/E/L/L/O/$/8/8/ /T/h/e/r/e/ /i/s/ /O/n/e'
+>>> '/'.join(['c:','Desktop','Python_classes'])
+'c:/Desktop/Python_classes'
+>>> n
+'HELLO$88 There is One'
+>>> n.split(' ',4)
+['HELLO$88', 'There', 'is', 'One']
+>>> n.split(' ',2)
+['HELLO$88', 'There', 'is One']
+>>> n.rsplit(' ',2)
+['HELLO$88 There', 'is', 'One']
+>>> n.partition(' ')
+('HELLO$88', ' ', 'There is One')
+>>> n.rpartition(' ')
+('HELLO$88 There is', ' ', 'One')
+>>> n.rpartition('O')
+('HELLO$88 There is ', 'O', 'ne')
+>>> n
+'HELLO$88 There is One'
+>>> c
+"hello ' how are you?MNI"
+>>> a
+[1, 2, 3, (4, 5, 6), 'hello']
+>>> a.insert(234)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: insert() takes exactly 2 arguments (1 given)
+>>> a.insert(234,2)
+>>> a
+[1, 2, 3, (4, 5, 6), 'hello', 2]
+>>> a.insert(0,2)
+>>> a
+[2, 1, 2, 3, (4, 5, 6), 'hello', 2]
+>>> a.insert(4,'MNI')
+>>> a
+[2, 1, 2, 3, 'MNI', (4, 5, 6), 'hello', 2]
+>>> a[4]
+'MNI'
+>>> a.index[4]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'builtin_function_or_method' object has no attribute '__getitem__'
+>>> a.index(4)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: 4 is not in list
+>>> a.index('MNI')
+4
+>>> a
+[2, 1, 2, 3, 'MNI', (4, 5, 6), 'hello', 2]
+>>> a.sorted()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'list' object has no attribute 'sorted'
+>>> sorted(a)
+[1, 2, 2, 2, 3, 'MNI', 'hello', (4, 5, 6)]
+>>> a.append(('e','r','t'))
+>>> a
+[2, 1, 2, 3, 'MNI', (4, 5, 6), 'hello', 2, ('e', 'r', 't')]
+>>> sorted(a)
+[1, 2, 2, 2, 3, 'MNI', 'hello', (4, 5, 6), ('e', 'r', 't')]
+>>> g
+[1, 2, 3, 4]
+>>> h
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'h' is not defined
+>>> h=[g,[1,0,2,4])
+  File "<stdin>", line 1
+    h=[g,[1,0,2,4])
+                  ^
+SyntaxError: invalid syntax
+>>> h=[g,[1,0,2,4]]
+>>> h
+[[1, 2, 3, 4], [1, 0, 2, 4]]
+>>> h[0][1]
+2
+>>> h=[[1,2,3,[-2,-3]],[1,0,[-1,-2],2,4]]
+>>> h[0][1]
+2
+>>> h[0][3][0]
+-2
+>>> dir()
+['__builtins__', '__doc__', '__future__', '__name__', '__package__', 'a', 'b', '
+c', 'f', 'g', 'h', 'm', 'n', 'rao', 's', 'v', 'x']
+>>> x
+1000000000000.0
+>>> v
+[4, 5, 1, 2, 3]
+>>> c
+"hello ' how are you?MNI"
+>>> m
+'ooooooooHello\tthereoooooooo'
+>>> mydict={'a':1,'b':2,'c':3}
+>>> mydict.keys()
+['a', 'c', 'b']
+>>> mydict.values()
+[1, 3, 2]
+>>> mydict.items()
+[('a', 1), ('c', 3), ('b', 2)]
+>>> mydict['f']=6
+>>> mydict.items()
+[('a', 1), ('c', 3), ('b', 2), ('f', 6)]
+>>> mydict.del('f')
+  File "<stdin>", line 1
+    mydict.del('f')
+             ^
+SyntaxError: invalid syntax
+>>> mydict.delete('f')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'dict' object has no attribute 'delete'
+>>> mydict.remove('f')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'dict' object has no attribute 'remove'
+>>> dir(dict)
+['__class__', '__cmp__', '__contains__', '__delattr__', '__delitem__', '__doc__'
+, '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__',
+ '__hash__', '__init__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '_
+_new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__setitem__'
+, '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get
+', 'has_key', 'items', 'iteritems', 'iterkeys', 'itervalues', 'keys', 'pop', 'po
+pitem', 'setdefault', 'update', 'values', 'viewitems', 'viewkeys', 'viewvalues']
+
+>>> mydict.delitem('f')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'dict' object has no attribute 'delitem'
+>>> mydict.__delitem__('f')
+>>> mydict
+{'a': 1, 'c': 3, 'b': 2}
+>>> dir(float)
+['__abs__', '__add__', '__class__', '__coerce__', '__delattr__', '__div__', '__d
+ivmod__', '__doc__', '__eq__', '__float__', '__floordiv__', '__format__', '__ge_
+_', '__getattribute__', '__getformat__', '__getnewargs__', '__gt__', '__hash__',
+ '__init__', '__int__', '__le__', '__long__', '__lt__', '__mod__', '__mul__', '_
+_ne__', '__neg__', '__new__', '__nonzero__', '__pos__', '__pow__', '__radd__', '
+__rdiv__', '__rdivmod__', '__reduce__', '__reduce_ex__', '__repr__', '__rfloordi
+v__', '__rmod__', '__rmul__', '__rpow__', '__rsub__', '__rtruediv__', '__setattr
+__', '__setformat__', '__sizeof__', '__str__', '__sub__', '__subclasshook__', '_
+_truediv__', '__trunc__', 'as_integer_ratio', 'conjugate', 'fromhex', 'hex', 'im
+ag', 'is_integer', 'real']
+>>>

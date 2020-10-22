@@ -1,0 +1,16 @@
+
+
+def function1():
+    #while example
+
+    one=2
+    while(one):
+        print 'one'
+
+def function2():
+    #while example
+
+    one=2
+    while(one):
+        print 'two'  
+

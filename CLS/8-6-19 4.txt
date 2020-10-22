@@ -1,0 +1,295 @@
+Python 2.7.15 (v2.7.15:ca079a3ea3, Apr 30 2018, 16:22:17) [MSC v.1500 32 bit (In
+tel)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> for me in 'string':
+...     print me
+...
+s
+t
+r
+i
+n
+g
+>>> for me in 23:
+...     print me
+...
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'int' object is not iterable
+>>> for me in range(10):
+...     print 'hello'
+...
+hello
+hello
+hello
+hello
+hello
+hello
+hello
+hello
+hello
+hello
+>>> for me in (1,2,3):
+...     print me
+...
+1
+2
+3
+>>> for me in {1,2,3}:
+...     print me
+...
+1
+2
+3
+>>> for me in {1:'1',2:'two',3:'3'}:
+...     print me
+...
+1
+2
+3
+>>> while(raw_input('enter your name:')!='Rao'):
+...     pass()
+  File "<stdin>", line 2
+    pass()
+        ^
+SyntaxError: invalid syntax
+>>> while(raw_input('enter your name:')!='Rao'):
+...     pass
+...
+enter your name:sailesh
+enter your name:mohan
+enter your name:Rao
+>>> while(raw_input('enter your name:')!='Rao'):
+...     pass
+...
+enter your name:rao
+enter your name:RAO
+enter your name:rAO
+enter your name:Ra)
+enter your name:Rao
+>>> while(one):
+...     print 'did i ever display hello:?'
+...
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'one' is not defined
+>>> range(5)
+[0, 1, 2, 3, 4]
+>>> range(5)[1]*range(5)[2]*range(5)[3]*range(5)[4]
+24
+>>> result=1while(result>1)number=input('Enter the factorial number:')
+  File "<stdin>", line 1
+    result=1while(result>1)number=input('Enter the factorial number:')
+                ^
+SyntaxError: invalid syntax
+>>> result=1
+>>> number=input('Enter the factorial number:')
+Enter the factorial number:6
+>>> while(number>1):
+...     result=result*number
+...     number-=1
+...
+>>> number=input('Enter the factorial number:')
+Enter the factorial number:5
+>>> while(number>1):
+...     result=result*number
+...     number-=1
+... print result
+  File "<stdin>", line 4
+    print result
+        ^
+SyntaxError: invalid syntax
+>>> dictionary={1:'one',2:'two}
+  File "<stdin>", line 1
+    dictionary={1:'one',2:'two}
+                              ^
+SyntaxError: EOL while scanning string literal
+>>> dictionary={1:'one',2:'two'}
+>>> 1 in dictionary
+True
+>>> 2 in dictionary
+True
+>>> 'two' in dictionary
+False
+>>> dictionary[2]
+'two'
+>>> username=input('Enter username:')
+Enter username:2
+>>> dictionary[username]==raw_input('enter password:')
+enter password:'three'
+False
+>>> dictionary[username]==raw_input('enter password:')
+enter password:'two'
+False
+>>> username
+2
+>>> dictionary[username]
+'two'
+>>> dictionary[username]=='two'
+True
+>>> dictionary[username]==raw_input('enter password:')
+enter password:two
+True
+>>> range(1)
+[0]
+>>> a=range(10)
+>>> a
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+>>> b=a.append('hello')
+>>> b
+>>> a
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'hello']
+>>> a
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'hello']
+>>> b=a
+>>> a.append('rt')
+>>> a
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'hello', 'rt']
+>>> b
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'hello', 'rt']
+>>> c=23
+>>> d=c
+>>> c=c*2
+>>> c
+46
+>>> d
+23
+>>> help(list)
+Help on class list in module __builtin__:
+
+class list(object)
+ |  list() -> new empty list
+ |  list(iterable) -> new list initialized from iterable's items
+ |
+ |  Methods defined here:
+ |
+ |  __add__(...)
+ |      x.__add__(y) <==> x+y
+ |
+ |  __contains__(...)
+ |      x.__contains__(y) <==> y in x
+ |
+ |  __delitem__(...)
+ |      x.__delitem__(y) <==> del x[y]
+ |
+ |  __delslice__(...)
+ |      x.__delslice__(i, j) <==> del x[i:j]
+ |
+ |      Use of negative indices is not supported.
+ |
+ |  __eq__(...)
+ |      x.__eq__(y) <==> x==y
+ |
+ |  __ge__(...)
+ |      x.__ge__(y) <==> x>=y
+ |
+ |  __getattribute__(...)
+ |      x.__getattribute__('name') <==> x.name
+ |
+ |  __getitem__(...)
+ |      x.__getitem__(y) <==> x[y]
+ |
+ |  __getslice__(...)
+ |      x.__getslice__(i, j) <==> x[i:j]
+ |
+ |      Use of negative indices is not supported.
+ |
+ |  __gt__(...)
+ |      x.__gt__(y) <==> x>y
+ |
+ |  __iadd__(...)
+ |      x.__iadd__(y) <==> x+=y
+ |
+ |  __imul__(...)
+ |      x.__imul__(y) <==> x*=y
+ |
+ |  __init__(...)
+ |      x.__init__(...) initializes x; see help(type(x)) for signature
+ |
+ |  __iter__(...)
+ |      x.__iter__() <==> iter(x)
+ |
+ |  __le__(...)
+ |      x.__le__(y) <==> x<=y
+ |
+ |  __len__(...)
+ |      x.__len__() <==> len(x)
+ |
+ |  __lt__(...)
+ |      x.__lt__(y) <==> x<y
+ |
+ |  __mul__(...)
+ |      x.__mul__(n) <==> x*n
+ |
+ |  __ne__(...)
+ |      x.__ne__(y) <==> x!=y
+ |
+ |  __repr__(...)
+ |      x.__repr__() <==> repr(x)
+ |
+ |  __reversed__(...)
+ |      L.__reversed__() -- return a reverse iterator over the list
+ |
+ |  __rmul__(...)
+ |      x.__rmul__(n) <==> n*x
+ |
+ |  __setitem__(...)
+ |      x.__setitem__(i, y) <==> x[i]=y
+ |
+ |  __setslice__(...)
+ |      x.__setslice__(i, j, y) <==> x[i:j]=y
+ |
+ |      Use  of negative indices is not supported.
+ |
+ |  __sizeof__(...)
+ |      L.__sizeof__() -- size of L in memory, in bytes
+ |
+ |  append(...)
+ |      L.append(object) -- append object to end
+ |
+ |  count(...)
+ |      L.count(value) -> integer -- return number of occurrences of value
+ |
+ |  extend(...)
+ |      L.extend(iterable) -- extend list by appending elements from the iterabl
+e
+ |
+ |  index(...)
+ |      L.index(value, [start, [stop]]) -> integer -- return first index of valu
+e.
+ |      Raises ValueError if the value is not present.
+ |
+ |  insert(...)
+ |      L.insert(index, object) -- insert object before index
+ |
+ |  pop(...)
+ |      L.pop([index]) -> item -- remove and return item at index (default last)
+.
+^CTraceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "C:\Python27\lib\site.py", line 446, in __call__
+    return pydoc.help(*args, **kwds)
+  File "C:\Python27\lib\pydoc.py", line 1795, in __call__
+    self.help(request)
+  File "C:\Python27\lib\pydoc.py", line 1842, in help
+    else: doc(request, 'Help on %s:')
+  File "C:\Python27\lib\pydoc.py", line 1579, in doc
+    pager(render_doc(thing, title, forceload))
+  File "C:\Python27\lib\pydoc.py", line 1376, in pager
+    pager(text)
+  File "C:\Python27\lib\pydoc.py", line 1396, in <lambda>
+    return lambda text: tempfilepager(plain(text), 'more <')
+  File "C:\Python27\lib\pydoc.py", line 1432, in tempfilepager
+    os.system(cmd + ' "' + filename + '"')
+KeyboardInterrupt
+>>> a
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'hello', 'rt']
+>>> a.append({1:2,2:3})
+>>> a
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'hello', 'rt', {1: 2, 2: 3}]
+>>> a.count(5)
+1
+>>> n=a.count(5)
+>>> n
+1
+>>>

@@ -1,0 +1,11 @@
+#continue statement
+
+
+for name in 'hello':
+    print 'name is :',name
+    for me in 'box':
+        print 'me is:',me
+        if me=='o':
+            break
+    continue
+print 'done'
